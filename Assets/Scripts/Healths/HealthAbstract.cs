@@ -1,10 +1,12 @@
-using TMPro;
 using UnityEngine;
 
 public class HealthAbstract : MonoBehaviour,IHealth
 {
-    public float _currentHealth;
-    public float _maxHealth;
+    private float _currentHealth;
+    [SerializeField] private float _maxHealth;
+
+    public float CurrentHealth => _currentHealth;
+    public float MaxHealth => _maxHealth;
 
     private void Awake()
     {

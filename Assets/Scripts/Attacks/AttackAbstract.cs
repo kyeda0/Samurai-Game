@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class AttackAbstract : MonoBehaviour, IAttack
@@ -7,7 +6,7 @@ public abstract class AttackAbstract : MonoBehaviour, IAttack
    [SerializeField] protected LayerMask _targetMask;
    public float _attackRange;
    [SerializeField] protected float _attackDamage;
-   [SerializeField] private  float _nextAttackTime;
+   private  float _nextAttackTime;
    [SerializeField] protected float _attackRate;
    public virtual void Attack()
    {

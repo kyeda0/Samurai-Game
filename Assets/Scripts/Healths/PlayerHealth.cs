@@ -7,6 +7,6 @@ public class PlayerHealth : HealthAbstract
     public override void TakeDamage(float _damage)
     {
         base.TakeDamage(_damage);
-        Debug.Log("Игрок получил дамаг" + _currentHealth);
+        Debug.Log("Игрок получил дамаг" + CurrentHealth);
     }
 }

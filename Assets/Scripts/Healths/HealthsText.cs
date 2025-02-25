@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class HealthsText : MonoBehaviour
 {
     [SerializeField] private HealthAbstract _healtPlayer;
@@ -15,6 +12,6 @@ public class HealthsText : MonoBehaviour
 
     void Update()
     {
-        _health.fillAmount = _healtPlayer._currentHealth / _healtPlayer._maxHealth;
+        _health.fillAmount = _healtPlayer.CurrentHealth / _healtPlayer.MaxHealth;
     }
 }

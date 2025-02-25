@@ -7,7 +7,7 @@ public class EnemyHealth : HealthAbstract
     public override void TakeDamage(float _damage)
     {
         base.TakeDamage(_damage);
-        Debug.Log("Враг получил дамаг" + _currentHealth);
+        Debug.Log("Враг получил дамаг" + CurrentHealth);
 
     }
 }
