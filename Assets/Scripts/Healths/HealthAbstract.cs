@@ -1,14 +1,15 @@
+using System.Collections;
 using UnityEngine;
 
 public class HealthAbstract : MonoBehaviour,IHealth
 {
-    private float _currentHealth;
+    [SerializeField] private float _currentHealth;
     [SerializeField] private float _maxHealth;
-
+    [SerializeField] private float _timer;
     public float CurrentHealth => _currentHealth;
     public float MaxHealth => _maxHealth;
 
-    private void Awake()
+    private void Start()
     {
         _currentHealth = _maxHealth;
     }
@@ -24,6 +25,14 @@ public class HealthAbstract : MonoBehaviour,IHealth
 
     public virtual void Kill()
     {
-        Destroy(gameObject);
+        StartCoroutine(ITimeForDead());
+    }
+
+    IEnumerator  ITimeForDead()
+    {
+        while(true){
+            yield return new WaitForSeconds(_timer);
+            Destroy(gameObject);
+        }
     }
 }

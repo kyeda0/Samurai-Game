@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EnemyHealth : HealthAbstract
 {
-
     public override void Kill() { base.Kill();}
     public override void TakeDamage(float _damage)
     {
