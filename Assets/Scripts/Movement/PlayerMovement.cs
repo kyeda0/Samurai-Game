@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private  float _standartSpeed;
+
+    [SerializeField] private   float _standartSpeed;
     [HideInInspector] public  float _currentSpeed;
     private float _inputHorizontal;
     private float _inputVertical;
